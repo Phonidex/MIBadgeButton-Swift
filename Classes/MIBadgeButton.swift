@@ -11,6 +11,8 @@ import UIKit
 open class MIBadgeButton: UIButton {
     
     fileprivate var badgeLabel: UILabel
+    
+    @objc
     open var badgeString: String? {
         didSet {
             setupBadgeViewWithString(badgeText: badgeString)
@@ -24,12 +26,14 @@ open class MIBadgeButton: UIButton {
         }
     }
     
+    @objc
     open var badgeBackgroundColor = UIColor.red {
         didSet {
             badgeLabel.backgroundColor = badgeBackgroundColor
         }
     }
     
+    @objc
     open var badgeTextColor = UIColor.white {
         didSet {
             badgeLabel.textColor = badgeTextColor
